@@ -40,6 +40,10 @@ Created 8/12/2017
 
 ## Credits
 Sherman Gore
+Special thanks to:
+    * Gordon Ramsay
+    * Tyler Florence
+    * Hamburgler
 
 ## License
 MIT

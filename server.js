@@ -1,3 +1,4 @@
+// Set up requirements
 let express = require('express');
 let bodyParser = require("body-parser");
 let methodOverride = require("method-override");
@@ -23,6 +24,7 @@ app.use(methodOverride("_method"));
 // Set Handlebars.
 let exphbs = require("express-handlebars");
 
+// set the view engine to use handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
@@ -30,5 +32,8 @@ app.set("view engine", "handlebars");
 let routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
-
-app.listen(PORT);
+// Starts the server listening
+// =============================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});

@@ -4,6 +4,8 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
+
+// Get all data for display
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
     var hbsObject = {
@@ -14,6 +16,7 @@ router.get("/", function(req, res) {
   });
 });
 
+// Insert a new burger
 router.post("/", function(req, res) {
   burger.insertOne([
     "burger_name", "devoured"
@@ -24,6 +27,8 @@ router.post("/", function(req, res) {
   });
 });
 
+
+// Update a burger by Id
 router.put("/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 

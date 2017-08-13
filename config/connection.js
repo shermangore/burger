@@ -1,7 +1,8 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
-
 var connection;
+
+// Set the connection variable based on whether the app is running on Heroku with a JawsDB instance
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
