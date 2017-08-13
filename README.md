@@ -5,6 +5,9 @@ A simple Node/Express/Handlebars app that allows a user to input a custom burger
 1) git clone the repository to your local computer
 2) git bash into the directory created by the clone
 3) run npm install
+4) run schema.sql in appropriate MySql database
+5) update connection string to reflect credentials for your DB instance
+6) [optional] run seeds.sql in appropriate database to get prepopulated data for app
 
 ## Usage
 ### The application is fairly self-explanatory.  Enter a burger order (name and/or ingredients) in the text box, then click the "Add Burger" button
